@@ -3,52 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <style>
-        body{
-            padding:30px;
-            background:linear-gradient(to right, #e2e2e2, #c9d6ff);
-        }
-        h1{
-            text-align:center;
-
-        }
-        button{
-            color:blueviolet;
-            background-color:#c9d6ff;
-            padding:5px;
-            border-radius:5px;
-            font-size:1rem;
-            font-weight:bold;
-            border:none;
-        }
-        button:hover{
-            text-decoration: underline;
-            color:blue;
-        }
-        button, div{
-            margin-left:15%;
-            font-size:20px;
-            padding:10px;
-        }
-        div{
-            font-weight:400;
-            color:rgb(12,11,11);
-
-        }
-        span{
-            font-weight:600;
-            font-size:22px;
-            color:black;
-        }
-    </style>
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.1/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@1.6.0/dist/flowbite.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="breastcancer.png">
     <script type="module" src="./homepage.js"></script>
 </head>
 <body>
-    <h1>Welcome to the Homepage</h1>
-    <div>First Name: <span id="loggedUserFName"></span></div>
-    <div>Last Name: <span id="loggedUserLName"></span></div>
-    <div>Email: <span id="loggedUserEmail"></span></div>
-    <button id="logout">Logout</button>
+        <!-- Navigation Bar -->
+        <nav class="bg-pink-100 border-gray-200 dark:bg-gray-900">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="breastlogo.svg" class="h-8" alt="Flowbite Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-pink-700 dark:text-white">Women's
+                        Health</span>
+                </a>
+                <button data-collapse-toggle="navbar-default" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul
+                        class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-pink-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-pink-100 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <li>
+                            <a href="index.html"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-pink-200 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+                        </li>
+                        <li>
+                            <a href="objectives.html"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-pink-200 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Objectives</a>
+                        </li>
+                        <li>
+                            <a href="methods.html"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-pink-200 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Introduction</a>
+                        </li>
+                        <li>
+                            <a href="techniques.html"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-pink-200 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Techniques</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-pink-200 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="page bg-gray-100">
+            <div class="container mx-auto p-4">
+                <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Dashboard</h1>
+                <div class="bg-white rounded-lg shadow p-6 mb-4">
+                    <div class="text-gray-700 text-lg font-medium">First Name: <span id="loggedUserFName" class="text-gray-900 font-bold"></span></div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6 mb-4">
+                    <div class="text-gray-700 text-lg font-medium">Last Name: <span id="loggedUserLName" class="text-gray-900 font-bold"></span></div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <div class="text-gray-700 text-lg font-medium">Email: <span id="loggedUserEmail" class="text-gray-900 font-bold"></span></div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6 mb-4">
+                    <div class="text-gray-700 text-lg font-medium">
+                        Student Progress: <span id="loggedUserLName" class="text-gray-900 font-bold"></span>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+        </div>
 </body>
 </html>

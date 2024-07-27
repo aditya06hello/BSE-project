@@ -3,14 +3,13 @@ import {getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/fire
 import{getFirestore, getDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCO4j4SIcDIJWAPRUNN9T3LnpbmI7tHe1o",
-    authDomain: "women-shealthbreastselfexam.firebaseapp.com",
-    projectId: "women-shealthbreastselfexam",
-    storageBucket: "women-shealthbreastselfexam.appspot.com",
-    messagingSenderId: "131810140827",
-    appId: "1:131810140827:web:73dac5659074a22b531c3e",
-    measurementId: "G-BNE354WW9Z"
-};
+    apiKey: "AIzaSyCTjtmlU7cFDWm0NakIouvfX6jkTXEOl30",
+    authDomain: "authwithbreastselfexamination.firebaseapp.com",
+    projectId: "authwithbreastselfexamination",
+    storageBucket: "authwithbreastselfexamination.appspot.com",
+    messagingSenderId: "593001136016",
+    appId: "1:593001136016:web:e6e51db5f2b45c3825fd15"
+  };
  
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
@@ -51,7 +50,7 @@ const firebaseConfig = {
     localStorage.removeItem('loggedInUserId');
     signOut(auth)
     .then(()=>{
-        window.location.href='homepage.html';
+        window.location.href='loginsuccessful.html';
     })
     .catch((error)=>{
         console.error('Error Signing out:', error);
