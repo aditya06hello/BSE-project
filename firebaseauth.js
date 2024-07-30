@@ -77,7 +77,7 @@ signIn.addEventListener('click', (event) => {
             showMessage('login is successful', 'signInMessage');
             const user = userCredential.user;
             localStorage.setItem('loggedInUserId', user.uid);
-            window.location.href = 'loginsuccessful.html';
+            window.location.href = 'dashboard.html';
         })
         .catch((error) => {
             const errorCode = error.code;

@@ -44,7 +44,7 @@
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-pink-700 dark:text-white">Women's
                     Health</span>
             </a>
-            <button id="menu-toggle" data-collapse-toggle="navbar-default" type="button"
+            <button id="menu-toggle" type="button"
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 aria-controls="navbar-default" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
@@ -74,27 +74,104 @@
                             class="block py-2 px-3 text-gray-900 rounded hover:bg-pink-200 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Techniques</a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-pink-200 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                        <a href="dashboard.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-pink-200 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Dashboard</a>
                     </li>
                 </ul>
                 <div class="flex space-x-4 mt-4 md:mt-0">
                     <a href="homepage.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Login</a>
+                    <!-- User Icon and Preview -->
+                    <div class="relative">
+                        <a href="loginsuccessful.html" class="user-icon-container flex items-center space-x-2">
+                            <div class="user-icon bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center">
+                                <img src="user.png" alt="User Icon" class="w-10 h-10 rounded-full">
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <script>
-        document.getElementById('menu-toggle').addEventListener('click', function () {
-            var menu = document.getElementById('navbar-default');
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-            } else {
-                menu.classList.add('hidden');
-            }
-        });
-    </script>
+    <!-- Content -->
+    <div class="page bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+        <div class="max-w-4xl mx-auto p-6 sm:p-10">
+            <h1 class="text-3xl font-bold mb-4">Techniques of Palpation!
+            </h1>
+
+            <section class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg mb-6">
+                <h2 class="text-2xl font-semibold mb-4"></h2>
+                <p class="mb-4">
+                    Breast self-examination (BSE) is an important technique for individuals to detect any changes or
+                    abnormalities in their breast tissue. While it's not a substitute for professional medical
+                    evaluations, regular BSE can help individuals become familiar with their breasts and notice any
+                    unusual changes. Here are the common techniques for palpation during a BSE
+                </p>
+            </section>
+
+            <div class="flex justify-center p-4">
+                <div class="w-full md:w-3/4 lg:w-1/2">
+                    <div class="relative" style="padding-top: 56.25%;"> <!-- 16:9 aspect ratio -->
+                        <iframe
+                            src="https://docs.google.com/presentation/d/e/2PACX-1vR6QOLKhtzY1gtiW7Vs-pUJzuZfoDyZpsOkSK6e8vcOZThCGbVlBSF7WfJtAaW0KY3EhMOqQaIxlpf6/embed?start=true&loop=true&delayms=3000"
+                            frameborder="0" allowfullscreen="true" mozallowfullscreen="true"
+                            webkitallowfullscreen="true" class="absolute top-0 left-0 w-full h-full"></iframe>
+                    </div>
+                </div>
+            </div>
+
+
+            <script>
+                document.getElementById('menu-toggle').addEventListener('click', function () {
+                    var menu = document.getElementById('navbar-default');
+                    if (menu.classList.contains('hidden')) {
+                        menu.classList.remove('hidden');
+                    } else {
+                        menu.classList.add('hidden');
+                    }
+                });
+            </script>
+            <script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
+            <script src="https://mediafiles.botpress.cloud/12fc3595-7e26-4b77-9111-cbe986aef865/webchat/v2/config.js"></script>
+            <!-- Footer -->
+            <footer class="bg-pink-100 rounded-lg shadow dark:bg-gray-900 m-4 p-6">
+                <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+                    <div class="sm:flex sm:items-center sm:justify-between">
+                        <a href="homepage.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                            <img src="breastlogo.svg" class="h-8" alt="Flowbite Logo" />
+                            <span
+                                class="self-center text-2xl font-semibold whitespace-nowrap text-pink-700 dark:text-white">Women's
+                                Health</span>
+                        </a>
+                        <ul
+                            class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-600 sm:mb-0 dark:text-gray-400">
+                            <li class="m-2">
+                                <a href="#"
+                                    class="hover:underline text-pink-600 dark:text-pink-500 px-4 py-2 border border-pink-600 dark:border-pink-500 rounded">About</a>
+                            </li>
+                            <li class="m-2">
+                                <a href="#"
+                                    class="hover:underline text-pink-600 dark:text-pink-500 px-4 py-2 border border-pink-600 dark:border-pink-500 rounded">Privacy
+                                    Policy</a>
+                            </li>
+                            <li class="m-2">
+                                <a href="#"
+                                    class="hover:underline text-pink-600 dark:text-pink-500 px-4 py-2 border border-pink-600 dark:border-pink-500 rounded">Licensing</a>
+                            </li>
+                            <li class="m-2">
+                                <a href="#"
+                                    class="hover:underline text-pink-600 dark:text-pink-500 px-4 py-2 border border-pink-600 dark:border-pink-500 rounded">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <hr class="my-6 border-pink-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                    <span class="block text-sm text-gray-600 sm:text-center dark:text-gray-400">© 2023 <a
+                            href="breastlogo.svg" class="hover:underline text-pink-600 dark:text-pink-500">Women's
+                            Health™</a>. All Rights
+                        Reserved.</span>
+                </div>
+            </footer>
 </body>
 
 </html>
